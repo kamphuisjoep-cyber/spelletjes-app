@@ -8,32 +8,16 @@
 <body>
     <h1>Spelletjes App</h1>
 
+    <!-- MENU -->
     <div id="menu">
-        <div class="game-grid">
-            <div class="game-card" onclick="startRaadHetGetal()">
-                <h3>Raad het getal</h3>
-                <p>Raad het geheime nummer tussen 1 en 10!</p>
-            </div>
-            <div class="game-card" onclick="startFlappyBird()">
-                <h3>Flappy Bird</h3>
-                <p>Druk op spatie om te vliegen en ontwijk de pijpen.</p>
-            </div>
-            <div class="game-card" onclick="startTetris()">
-                <h3>Tetris</h3>
-                <p>Maak volle lijnen om punten te scoren.</p>
-            </div>
-            <div class="game-card" onclick="startSnake()">
-                <h3>Snake</h3>
-                <p>Eet de rode blokjes en word steeds langer.</p>
-            </div>
-            <div class="game-card" onclick="startGalgje()">
-                <h3>Galgje</h3>
-                <p>Raad het geheime woord voordat je 6 fouten maakt!</p>
-            </div>
-        </div>
+        <button onclick="startRaadHetGetal()">Raad het getal</button>
+        <button onclick="startFlappyBird()">Flappy Bird</button>
+        <button onclick="startTetris()">Tetris</button>
+        <button onclick="startSnake()">Snake</button>
+        <button onclick="startGalgje()">Galgje</button>
     </div>
 
-    <!-- Raad het Getal -->
+    <!-- RAAD HET GETAL -->
     <div id="raadhetgetal" style="display:none;">
         <h2>Raad het getal</h2>
         <button id="raad-knop">Raad!</button>
@@ -41,7 +25,7 @@
         <button onclick="terugNaarMenu()">Terug naar menu</button>
     </div>
 
-    <!-- Flappy Bird -->
+    <!-- FLAPPY BIRD -->
     <div id="flappybird" style="display:none;">
         <h2>Flappy Bird</h2>
         <canvas id="flappyCanvas" width="400" height="600"></canvas>
@@ -50,40 +34,33 @@
         <button onclick="terugNaarMenu()">Terug naar menu</button>
     </div>
 
-    <!-- Tetris -->
+    <!-- TETRIS -->
     <div id="tetris" style="display:none;">
         <h2>Tetris</h2>
-        <canvas id="tetrisCanvas" width="240" height="400"></canvas>
+        <canvas id="tetrisCanvas" width="200" height="400"></canvas>
         <div id="tetrisScore"></div>
-        <p>Besturing:<br>
-            Pijltje links/rechts: bewegen<br>
-            Pijltje omhoog: draaien<br>
-            Pijltje omlaag: sneller laten vallen
-        </p>
+        <p>Besturing:<br>Pijltjes links/rechts: bewegen<br>Pijltje omhoog: draaien<br>Pijltje omlaag: sneller vallen</p>
         <button onclick="terugNaarMenu()">Terug naar menu</button>
     </div>
 
-    <!-- Snake -->
+    <!-- SNAKE -->
     <div id="snake" style="display:none;">
         <h2>Snake</h2>
         <canvas id="snakeCanvas" width="400" height="400"></canvas>
         <div id="snakeScore"></div>
-        <p>Besturing: pijltjestoetsen<br>
-           Eet het rode blokje om te groeien.<br>
-           Game Over als je jezelf raakt of tegen de rand botst.
-        </p>
+        <p>Besturing: pijltjestoetsen<br>Eet het rode blokje om te groeien.<br>Game Over als je jezelf raakt of tegen de rand botst.</p>
         <button onclick="terugNaarMenu()">Terug naar menu</button>
     </div>
 
-    <!-- Galgje -->
+    <!-- GALGJE -->
     <div id="galgje" style="display:none;">
         <h2>Galgje</h2>
-        <p id="galgje-woord"></p>
-        <p>Foute letters: <span id="foute-letters"></span></p>
-        <p>Aantal fouten: <span id="fout-teller">0</span> / 6</p>
-        <input type="text" id="galgje-invoer" maxlength="1" placeholder="Letter">
-        <button onclick="raadLetter()">Raad</button>
-        <p id="galgje-resultaat"></p>
+        <div id="galgje-woord"></div>
+        <input id="galgje-invoer" type="text" maxlength="1">
+        <button onclick="raadLetter()">Raad letter</button>
+        <div>Foute letters: <span id="foute-letters"></span></div>
+        <div>Fouten: <span id="fout-teller"></span></div>
+        <div id="galgje-resultaat"></div>
         <button onclick="terugNaarMenu()">Terug naar menu</button>
     </div>
 
