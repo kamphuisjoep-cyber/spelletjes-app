@@ -27,9 +27,17 @@ canvas {
     border: 2px solid #0288d1;
 }
 
-#flappyCanvas { background: #b3e5fc; }
-#tetrisCanvas { background: #222; }
-#snakeCanvas { background: #e0ffe0; }
+#flappyCanvas {
+    background: #b3e5fc;
+}
+
+#tetrisCanvas {
+    background: #222;
+}
+
+#snakeCanvas {
+    background: #e0ffe0;
+}
 
 #score, #tetrisScore, #snakeScore {
     font-size: 22px;
@@ -37,37 +45,7 @@ canvas {
     margin-top: 10px;
 }
 
-#resultaat { margin-top: 30px; font-size: 20px; }
-
-/* Menu grid */
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 10px;
+#resultaat, #galgje-resultaat {
+    margin-top: 30px;
+    font-size: 20px;
 }
-
-.game-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-    background: #fafafa;
-}
-
-.game-card h3 {
-    margin-top: 0;
-    color: #0288d1;
-}
-
-#galgje { margin-top: 20px; font-size: 20px; }
-#galgje-woord { letter-spacing: 5px; font-weight: bold; font-size: 26px; }
