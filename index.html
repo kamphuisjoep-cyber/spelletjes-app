@@ -1,57 +1,12 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <title>Spelletjes App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Spelletjes App</h1>
-    <div id="menu">
-        <button onclick="startRaadHetGetal()">Raad het getal</button>
-        <button onclick="startFlappyBird()">Flappy Bird</button>
-        <button onclick="startTetris()">Tetris</button>
-        <button onclick="startSnake()">Snake</button>
-    </div>
+<button onclick="startGalgje()">Galgje</button>
 
-    <div id="raadhetgetal" style="display:none;">
-        <h2>Raad het getal</h2>
-        <button id="raad-knop">Raad!</button>
-        <div id="resultaat"></div>
-        <button onclick="terugNaarMenu()">Terug naar menu</button>
-    </div>
-
-    <div id="flappybird" style="display:none;">
-        <h2>Flappy Bird (Basisversie)</h2>
-        <canvas id="spelCanvas" width="400" height="600"></canvas>
-        <p>Druk op spatie om te vliegen!</p>
-        <div id="score"></div>
-        <button onclick="terugNaarMenu()">Terug naar menu</button>
-    </div>
-
-    <div id="tetris" style="display:none;">
-        <h2>Tetris</h2>
-        <canvas id="tetrisCanvas" width="240" height="400"></canvas>
-        <div id="tetrisScore"></div>
-        <p>Besturing:<br>
-            Pijltje links/rechts: bewegen<br>
-            Pijltje omhoog: draaien<br>
-            Pijltje omlaag: sneller laten vallen
-        </p>
-        <button onclick="terugNaarMenu()">Terug naar menu</button>
-    </div>
-
-    <div id="snake" style="display:none;">
-        <h2>Snake</h2>
-        <canvas id="snakeCanvas" width="400" height="400"></canvas>
-        <div id="snakeScore"></div>
-        <p>Besturing: pijltjestoetsen<br>
-           Eet het rode blokje om te groeien.<br>
-           Game Over als je jezelf raakt of tegen de rand botst.
-        </p>
-        <button onclick="terugNaarMenu()">Terug naar menu</button>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div id="galgje" style="display:none;">
+    <h2>Galgje</h2>
+    <p id="galgje-woord"></p>
+    <p>Foute letters: <span id="foute-letters"></span></p>
+    <p>Aantal fouten: <span id="fout-teller">0</span> / 6</p>
+    <input type="text" id="galgje-invoer" maxlength="1" placeholder="Letter">
+    <button onclick="raadLetter()">Raad</button>
+    <p id="galgje-resultaat"></p>
+    <button onclick="terugNaarMenu()">Terug naar menu</button>
+</div>
