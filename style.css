@@ -25,13 +25,9 @@ canvas {
     display: block;
     margin: 0 auto;
     border: 2px solid #0288d1;
-    max-width: 90vw;
-    max-height: 70vh;
-    width: auto;
-    height: auto;
 }
 
-#spelCanvas { background: #b3e5fc; }
+#flappyCanvas { background: #b3e5fc; }
 #tetrisCanvas { background: #222; }
 #snakeCanvas { background: #e0ffe0; }
 
@@ -73,6 +69,5 @@ canvas {
     color: #0288d1;
 }
 
-/* Galgje styling */
 #galgje { margin-top: 20px; font-size: 20px; }
 #galgje-woord { letter-spacing: 5px; font-weight: bold; font-size: 26px; }
